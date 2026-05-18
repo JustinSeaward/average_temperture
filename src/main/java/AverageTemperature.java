@@ -21,6 +21,7 @@ public class AverageTemperature {
 
         System.out.println("Enter the temperature of each day ");
 
+        // for loop to enter temperature for the number of days entered
         for(int i = 0; i < temp.length; i++){
             System.out.println("\nTemperature of day " + (i+1) + ": ");
             int tempOfDay = scanner.nextInt();
@@ -36,12 +37,14 @@ public class AverageTemperature {
         double average = averageTemp.getAsDouble();
         int count = 0;
 
+        // for loop to check if average temp is lower than a day then print which day had a higher temp
         for(int i = 0; i < temp.length; i++ ){
             if(average < temp[i] ){
                 System.out.println("Day " + (i + 1) + " temperature was higher than the average.");
                 count++;
             }
         }
+        // Displays numbers of day that were higher than average temp
         System.out.println("\n" +count + " day(s) had a higher than average temperature.");
     }
 }
